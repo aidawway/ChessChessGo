@@ -19,7 +19,6 @@ class FynnIter(Iterable):
     def __next__(self):
 
         n = next(self.state)
-        print(f"{n}: {self.row} {self.col}")
         if n.isdigit(): self.col += int(n); return self.__next__()
         if n == "/": self.col = 0; self.row -= 1; return self.__next__()
         if n.isspace(): raise StopIteration
