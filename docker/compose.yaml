@@ -1,0 +1,32 @@
+services:
+  app:
+    privileged: true
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - 127.0.0.1:3030:3030
+    working_dir: /app
+    volumes:
+      - ../src:/app/src
+      - ../data:/app/data
+#      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test
+#      DISPLAY: ${DISPLAY} Windows?
+      DISPLAY: "${IP}:0"
+      LIBGL_ALWAYS_INDIRECT: 1
+    tty: true
+    container_name: app
+  postgres:
+    image: postgres:16
+    volumes:
+      - ../pg_data:/var/lib/postgresql/data
+    ports:
+      - 127.0.0.1:5432:5432
+    environment:
+      POSTGRES_PASSWORD: test
+      POSTGRES_USER: postgres
+      POSTGRES_DATABASE: chesschessgo_db

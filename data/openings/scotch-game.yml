@@ -1,0 +1,53 @@
+line: |
+
+
+name: Scotch Game
+line: |
+    e4      e5
+    Kf3     Kc6
+    D4
+variations:
+    - name: Scotch Gambit
+      line: |
+        __      xd4
+        Bc4
+    - name: Main Line
+      preferred: true
+      line: |
+        __      Nxd4
+        Nxd4
+      variations:
+        - name: Steinitz Variation
+          line: |
+            __    Qh4
+            Nc3   Bb4
+            Be2   Qxe4
+            Ndb5  Bxc3+
+            bxc3  Kd8
+            O-O
+        - name: Schmidt Variation
+          line: |
+            __    Kf6
+          variations:
+            - name: Four Knights Game
+              line: |
+                Nc3   Bb4
+                Nxc6  bxc6
+                Bd3   d5
+                exd5  cxd5
+                O-O   O-O
+                Bg5
+            - name: Mieses Variations
+              line: |
+                Nxc6  bxc6
+                e5    Qe7
+                Qe2   Nd5
+                C4    Ba6
+                b3    g6
+                f4
+        - name: Classical Variation
+          preferred: true
+          line: |
+            Bc5
+
+

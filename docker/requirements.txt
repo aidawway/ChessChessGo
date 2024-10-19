@@ -1,0 +1,7 @@
+pillow
+psycopg2
+opencv-python
+fastapi
+sqlalchemy
+uvicorn
+pyyaml

@@ -1,0 +1,33 @@
+line: |
+  e4 e5 # King's Pawn Opening
+  Kf3 Kc3 # King's Pawn Opening: King's Knight Variation
+  d4  xd4 # Scotch Game
+variation:
+  - line: | 
+     Bc4 __  # Scotch Gambit
+    variation:
+      - line: |
+          __    Kf6 # Scotch Gambit, Dubois Reti Defense
+        variation:
+          - line: |
+              Kg3   __ # Scotch Gambit, Dubois Reti Defense, Perreux Variation
+            variation:
+              - line: |
+                  __ Ke5
+                  Qxd4    __
+              - line: |
+                  __    e5
+                  exd5  Qe7
+          - line: |
+              e5    __ # Scotch Gambit, Dubois Reti Defense, Advance Variation
+            variation:
+              - line: |
+                  __ d5
+              - line: |
+                  __    Ke4
+              - line: |
+                  __    Kg4 #Scotch Gambit, Dubois Reti, Advance, Kingside Variation
+                  O-O
+
+  - line: |
+      Kxd4
